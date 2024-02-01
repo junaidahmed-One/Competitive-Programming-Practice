@@ -7,19 +7,32 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 import java.util.StringTokenizer;
+import java.util.HashMap;
 
-public class SumOfRoundNumbers {
+public class AntonAndPolyhedrons {
 
 
 	public static void main(String[] args) {
 		FastScanner scan = new FastScanner();
 
-		int t = scan.nextInt();
+		int n = scan.nextInt();
 
-		while (t-- > 0) {
+		HashMap<String, Integer> map = new HashMap<>();
 
+		map.put("Tetrahedron", 4);
+		map.put("Cube", 6);
+		map.put("Octahedron", 8);
+		map.put("Dodecahedron", 12);
+		map.put("Icosahedron", 20);
+		int ans = 0;
+		while (n-- > 0) {
+			String face = scan.next();
 
+			ans += map.get(face);
 		}
+
+		System.out.println(ans);
+
 	}
 
 	static final Random random = new Random();

@@ -8,17 +8,20 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.StringTokenizer;
 
-public class SumOfRoundNumbers {
+public class FoxAndSnake {
 
 
 	public static void main(String[] args) {
 		FastScanner scan = new FastScanner();
 
-		int t = scan.nextInt();
+		int n = scan.nextInt();
+		int m = scan.nextInt();
 
-		while (t-- > 0) {
-
-
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				System.out.print((i % 2 == 0) || ((j == m - 1) && (i % 4 == 1)) || ((j == 0) && (i % 4 == 3)) ? "#" : ".");
+			}
+			System.out.println("");
 		}
 	}
 
